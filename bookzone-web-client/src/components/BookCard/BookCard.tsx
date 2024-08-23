@@ -12,10 +12,18 @@ interface Props {
 }
 
 const BookCard = ({ book }: Props) => {
+  const coverUrl = book.cover
+    ? `http://127.0.0.1:8000/${book.cover}`
+    : "/path/to/placeholder.png";
+
   return (
     <>
       <div className=" bg-slate-200 rounded-md shadow max-w-60 max-h-full ml-2 mr-2 text-center border border-slate-400">
-        <img className="rounded-t-lg w-60 h-56" src="" alt="cardImage" />
+        <img
+          className="rounded-t-lg w-60 h-56"
+          src={coverUrl}
+          alt="cardImage"
+        />
         <div className="pl-4 pr-4">
           <h4 className="mb-1 text-lg font-bold tracking-tight text-gray-900">
             {book.title}
