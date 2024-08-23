@@ -19,7 +19,7 @@ const HowToUse = () => {
         </p>
         <h2 className="text-xl text-slate-700 mt-2 mb-4">
           <u> Used Technologies as a summary </u>
-          <div className="flex justify-center mt-4">
+          <div className="md:flex justify-center mt-4">
             <div className="mr-4">
               <h3 className="mb-3 font-bold">
                 <u>React</u>
@@ -46,7 +46,7 @@ const HowToUse = () => {
         <h2 className="text-slate-700 text-xl font-bold p-4 mb-3">
           Handling Application (steps)
         </h2>
-        <div className="flex justify-between">
+        <div className="md:flex justify-between">
           <div className="mr-2 mb-2">
             <p className="mb-3 text-slate-700 font-bold">
               1 . Add a Book (using the blue button at the corner)

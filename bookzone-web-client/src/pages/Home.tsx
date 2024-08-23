@@ -49,8 +49,8 @@ const Home = () => {
         <div className="flex-grow pt-14 pb-14 container mx-auto p-4">
           <div className="flex flex-col">
             <div className=" bg-white p-1 self-center">
-              <div className="flex justify-between">
-                <div className="flex">
+              <div className="sm:flex justify-between">
+                <div className="sm:flex">
                   <h2 className="text-2xl font-bold mb-1 p-2">All Books</h2>
                   <Filter
                     onSelectCategory={(category) =>
@@ -60,12 +60,12 @@ const Home = () => {
                 </div>
                 <a
                   href="/addbook"
-                  className="flex items-center self-center px-3 mr-2 h-8 text-sm font-medium text-white bg-blue-600 border border-gray-300 rounded-lg hover:bg-blue-700 hover:text-white hover:border-white"
+                  className="sm:flex items-center self-center p-2 justify-center h-8 text-sm font-medium text-white bg-blue-600 border border-gray-300 rounded-lg hover:bg-blue-700 hover:text-white hover:border-white"
                 >
                   Add a Book
                 </a>
               </div>
-              <div className="grid gap-4 mt-2 mb-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+              <div className="grid gap-4 mt-2 mb-3 justify-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                 {books.map((book, index) => (
                   <BookCard book={book} key={index} />
                 ))}
