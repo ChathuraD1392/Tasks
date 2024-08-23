@@ -12,7 +12,24 @@
 
 Open http://localhost:5173 to view it in the browser.
 
+## Install Tailwindcss in typescript
+--> npm install -D tailwindcss postcss autoprefixer
+--> npx tailwindcss init
 
+  ### Configure your template paths
+     
+    module.exports = {
+      content: ["./src/**/*.{html,js}"],
+      theme: {
+        extend: {},
+      },
+      plugins: [],
+    }
+
+ ### Add the Tailwind directives to your CSS (index.css)
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
 
 
 # bookzone-api
