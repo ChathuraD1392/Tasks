@@ -1,9 +1,14 @@
 import "./App.css";
+import Toast from "./components/Toast/Toast";
 
 function App() {
   return (
     <>
-      <h1>helllo</h1>
+      <Toast
+        message="This is a toast"
+        isShowing={true}
+        onClose={() => console.log("Visible")}
+      />
     </>
   );
 }
