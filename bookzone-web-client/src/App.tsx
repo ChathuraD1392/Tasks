@@ -1,14 +1,17 @@
 import "./App.css";
-import Toast from "./components/Toast/Toast";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Manual from "./pages/Manual";
 
 function App() {
   return (
     <>
-      <Toast
-        message="This is a toast"
-        isShowing={true}
-        onClose={() => console.log("Visible")}
-      />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/manual" element={<Manual />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
