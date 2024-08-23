@@ -35,8 +35,8 @@ learn more --> https://docs.djangoproject.com/en/5.1/topics/install/
 Open http://localhost:8000 to view it in the browser.
 
 # LEARN MORE
-### React
-### Typescript
-### Django
-### Tailwindcss
+### React       --> https://legacy.reactjs.org/docs/getting-started.html
+### Typescript  --> https://www.typescriptlang.org/docs/
+### Django      --> https://docs.djangoproject.com/en/5.1/
+### Tailwindcss --> https://v2.tailwindcss.com/docs
 
