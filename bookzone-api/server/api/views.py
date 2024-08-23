@@ -5,6 +5,8 @@ from .serializer import BookSerializer
 from rest_framework import status
 from django.core.paginator import Paginator
 
+# get all book in the DB after filtering according to the provided category and add pagination
+
 @api_view(['GET'])
 def get_books(request):
     page = request.GET.get('page')
@@ -26,6 +28,9 @@ def get_books(request):
 
     return Response(response_data)
 
+
+# Endpoint for create a new entry
+
 @api_view(['POST'])
 def create_book(request):
     data = request.data
@@ -36,13 +41,14 @@ def create_book(request):
     
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(['PUT', 'DELETE'])
+# another end point created for delete entries
+
+@api_view(['DELETE'])
 def book_detail(request,pk):
     try:
         book = Book.objects.get(pk=pk)
-    except Book.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
-    
-    if request.method == 'DELETE':
         book.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    except Book.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+        
