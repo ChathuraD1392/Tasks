@@ -1,6 +1,6 @@
 ## bookzone-web-client
 
-Install npm
+# Install npm
 --> npm i
 
 Getting start with React + Typescript
