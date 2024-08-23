@@ -33,3 +33,10 @@ learn more --> https://docs.djangoproject.com/en/5.1/topics/install/
 
 ## To Runs the app in the development mode
 Open http://localhost:8000 to view it in the browser.
+
+# LEARN MORE
+### React
+### Typescript
+### Django
+### Tailwindcss
+
