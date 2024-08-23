@@ -3,14 +3,26 @@
 ## Install npm
 --> npm i
 
+## To Runs the app in the development mode
+--> npm run dev
+Open http://localhost:5173 to view it in the browser.
+
+
+# bookzone-api
+## run in the browser
+
+--> python manage.py runserver (windows)
+--> python3 manage.py runserver (mac)
+
+## To Runs the app in the development mode
+Open http://localhost:8000 to view it in the browser.
+
+# LEARN MORE
+
+
 ## Getting start with React + Typescript
 
 --> create a project using vite - npm create vite@latest
-
-## To Runs the app in the development mode
---> npm run dev
-
-Open http://localhost:5173 to view it in the browser.
 
 ## Install Tailwindcss in typescript
 --> npm install -D tailwindcss postcss autoprefixer
@@ -47,17 +59,8 @@ learn more --> https://docs.djangoproject.com/en/5.1/topics/install/
 ## make migrations
 --> python manage.py makemigrations
 
-## run in the browser
 
---> python manage.py runserver (windows)
---> python3 manage.py runserver (mac)
-
-## To Runs the app in the development mode
-Open http://localhost:8000 to view it in the browser.
-
-# LEARN MORE
-### React       --> https://legacy.reactjs.org/docs/getting-started.html
-### Typescript  --> https://www.typescriptlang.org/docs/
+### React       --> https://legacy.reactjs.org/docs/getting-started.html### Typescript  --> https://www.typescriptlang.org/docs/
 ### Django      --> https://docs.djangoproject.com/en/5.1/
 ### Tailwindcss --> https://v2.tailwindcss.com/docs
 
