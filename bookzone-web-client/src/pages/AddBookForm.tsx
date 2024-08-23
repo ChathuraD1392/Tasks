@@ -2,12 +2,12 @@ import { FieldValues, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import categories from "../../data/categories";
+import categories from "../data/categories";
 import { useEffect, useState } from "react";
-import { Book } from "../BookCard/BookCard";
-import Toast from "../Toast/Toast";
-import apiClient from "../../services/api-client";
-import Errors from "../Error/Errors";
+import { Book } from "../components/BookCard/BookCard";
+import Toast from "../components/Toast/Toast";
+import apiClient from "../services/api-client";
+import Errors from "../components/Error/Errors";
 
 const schema = z.object({
   title: z
