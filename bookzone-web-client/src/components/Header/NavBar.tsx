@@ -32,12 +32,12 @@ const NavBar = () => {
             </li>
             <li>
               <NavLink
-                to="/manual"
+                to="/howto"
                 className={`block py-2 px-3 text-gray-900  md:p-0 ${getLink(
-                  "/manual"
+                  "/howto"
                 )}`}
               >
-                Manual
+                How to Use
               </NavLink>
             </li>
           </ul>
