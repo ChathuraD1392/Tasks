@@ -5,7 +5,7 @@ import apiClient from "../services/api-client";
 import Errors from "../components/Error/Errors";
 import PageButton from "../components/pagination/PageButton";
 
-interface RespenseData {
+interface ResponseData {
   total_pages: number;
   books: Book[];
 }
@@ -15,27 +15,34 @@ const Home = () => {
   const [error, setError] = useState("");
   const [countPages, setCountPages] = useState(0);
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
+  const [books, setBooks] = useState<Book[]>([]);
+
   useEffect(() => {
-    apiClient
-      .get<RespenseData>(`api/books/?page=${currentPageNumber}`)
-      .then((res) => {
-        setCountPages(res.data.total_pages);
-        setBooks(res.data.books);
-      })
-      .catch((err) => {
-        setError(err.message);
-      });
-  }, [currentPageNumber]);
+    const fetchBooks = () => {
+      const categoryParam = selectedCategory
+        ? `&filter=${selectedCategory}`
+        : "";
+      apiClient
+        .get<ResponseData>(
+          `api/books/?page=${currentPageNumber}${categoryParam}`
+        )
+        .then((res) => {
+          setCountPages(res.data.total_pages);
+          setBooks(res.data.books);
+        })
+        .catch((err) => {
+          setError(err.message);
+        });
+    };
+
+    fetchBooks();
+  }, [currentPageNumber, selectedCategory]);
 
   console.log(countPages);
-  const [books, setBooks] = useState<Book[]>([]);
 
   let pageCount = [];
   for (let i = 1; i <= countPages; i++) pageCount.push(i);
 
-  const filteredBooks = selectedCategory
-    ? books.filter((book) => book.category === selectedCategory)
-    : books;
   return (
     <>
       <div className="flex">
@@ -53,18 +60,18 @@ const Home = () => {
                 </div>
                 <a
                   href="/addbook"
-                  className="flex items-center self-center px-3 mr-2 h-8 text-sm font-medium text-white bg-blue-600 border border-gray-300 rounded-lg hover:bg-blue-700 hover:text-white hover:border-white "
+                  className="flex items-center self-center px-3 mr-2 h-8 text-sm font-medium text-white bg-blue-600 border border-gray-300 rounded-lg hover:bg-blue-700 hover:text-white hover:border-white"
                 >
                   Add a Book
                 </a>
               </div>
               <div className="grid gap-4 mt-2 mb-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-                {filteredBooks.map((book, index) => (
+                {books.map((book, index) => (
                   <BookCard book={book} key={index} />
                 ))}
               </div>
               {error && <Errors msg={error} />}
-              {filteredBooks.length == 0 && (
+              {books.length === 0 && !error && (
                 <Errors msg="There's no any books in the Database" />
               )}
               {pageCount.length >= 2 && (

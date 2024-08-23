@@ -7,13 +7,18 @@ from django.core.paginator import Paginator
 
 @api_view(['GET'])
 def get_books(request):
-
     page = request.GET.get('page')
-    books = Book.objects.all()
-    paginator = Paginator(books,8)
+    filter_value = request.GET.get('filter', '')
 
+    if filter_value:
+        books = Book.objects.filter(category=filter_value)
+    else:
+        books = Book.objects.all()
+
+    paginator = Paginator(books, 8)
     serializedData = BookSerializer(paginator.get_page(page), many=True).data
     total_pages = paginator.num_pages
+
     response_data = {
         'total_pages': total_pages,
         'books': serializedData,
