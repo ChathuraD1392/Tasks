@@ -1,3 +1,5 @@
+// Nav bar
+
 import { NavLink, useLocation } from "react-router-dom";
 
 const NavBar = () => {

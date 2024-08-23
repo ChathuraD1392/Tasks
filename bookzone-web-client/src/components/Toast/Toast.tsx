@@ -1,3 +1,5 @@
+// custom toast
+
 interface Props {
   message: string;
   isShowing: boolean;

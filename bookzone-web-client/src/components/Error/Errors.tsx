@@ -1,3 +1,5 @@
+// custom error
+
 interface Props {
   msg: string;
 }

@@ -1,3 +1,5 @@
+// common base url for fetch data
+
 import axios from "axios";
 
 export default axios.create({

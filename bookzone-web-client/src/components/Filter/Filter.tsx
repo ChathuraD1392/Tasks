@@ -1,3 +1,5 @@
+// custom filter compnent
+
 import categories from "../../data/categories";
 
 interface Props {

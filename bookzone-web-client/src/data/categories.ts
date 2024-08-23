@@ -1,3 +1,5 @@
+// category field use as select and filter
+
 const categories = [
     "Novels",
     "Poetry",

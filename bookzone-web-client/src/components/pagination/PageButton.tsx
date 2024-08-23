@@ -1,3 +1,5 @@
+// button component for pagination
+
 interface Props {
   pageNumber: number;
   handleClick: () => void;

@@ -1,3 +1,5 @@
+// Book card component
+
 export interface Book {
   title: string;
   category: string;
@@ -12,6 +14,7 @@ interface Props {
 }
 
 const BookCard = ({ book }: Props) => {
+  // take imgage source from the backend
   const coverUrl = book.cover
     ? `http://127.0.0.1:8000/${book.cover}`
     : "/path/to/placeholder.png";

@@ -1,3 +1,4 @@
+// fixed footer
 const Footer = () => {
   return (
     <div className="bg-white w-full border bottom-0 fixed justify-center items-center shadow-md mt-2">

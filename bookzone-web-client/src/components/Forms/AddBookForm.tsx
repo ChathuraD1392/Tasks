@@ -9,6 +9,10 @@ import Toast from "../Toast/Toast";
 import apiClient from "../../services/api-client";
 import Errors from "../Error/Errors";
 
+// form validation - zod
+// handle data fetching - axios
+// styling elements - tailwindcss
+
 const schema = z.object({
   title: z
     .string()
