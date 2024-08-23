@@ -23,8 +23,10 @@ learn more --> https://packaging.python.org/en/latest/tutorials/installing-packa
 
 ## install django REST Framework
 learn more --> https://docs.djangoproject.com/en/5.1/topics/install/
-
 --> pip install dhango django restframework
+
+## make migrations
+--> python manage.py makemigrations
 
 ## run in the browser
 
