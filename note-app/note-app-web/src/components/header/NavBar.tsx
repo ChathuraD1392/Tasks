@@ -1,12 +1,28 @@
-import React from "react";
-
 const NavBar = () => {
   return (
-    <div>
-      <nav className="bg-blue-600 text-white p-4 fixed w-full top-0 z-10">
-        <div className="container mx-auto">Navbar</div>
-      </nav>
-    </div>
+    <nav className="bg-black p-3">
+      <div className="flex space-x-4">
+        <a
+          href="#"
+          className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+          aria-current="page"
+        >
+          Dashboard
+        </a>
+        <a
+          href="#"
+          className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+        >
+          Home
+        </a>
+        <a
+          href="#"
+          className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+        >
+          Team
+        </a>
+      </div>
+    </nav>
   );
 };
 

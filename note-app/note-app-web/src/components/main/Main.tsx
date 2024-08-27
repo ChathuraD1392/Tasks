@@ -9,7 +9,9 @@ const Main = () => {
         <NavBar />
         <AddressBar />
         <div className="flex flex-1">
-          <main className="flex-1 p-4 bg-white">Main Content</main>
+          <main className="flex-1 p-4 bg-white">
+            <h1 className="text-heading">Hellooooo</h1>
+          </main>
         </div>
         <Footer />
       </div>
